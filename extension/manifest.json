@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Stratos",
+  "version": "0.0.1",
+  "permissions": ["contextMenus", "tabs", "storage"],
+  "background": { "service_worker": "src/background/index.ts" },
+  "action": {},
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["src/content/index.ts"] }
+  ]
+}
